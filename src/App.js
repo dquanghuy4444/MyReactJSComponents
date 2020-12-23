@@ -10,6 +10,7 @@ import {
 import Suggestions from './components/Suggestions/Suggestions';
 import DragAndDrop from './components/DragAndDrop/DragAndDrop';
 import DragAndDropWithDnD from './components/DragAndDropWithDnD/DragAndDropWithDnD';
+import Profiles from './components/SkeletonLoading/Profiles';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
             <li>
               <Link to="/draganddropwithdnd">Drag And Drop With React Beautiful DnD</Link>
             </li>
+            <li>
+              <Link to="/skeletonloading">Skeleton Loading</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -44,6 +48,9 @@ function App() {
           </Route>
           <Route path="/draganddropwithdnd">
             <DragAndDropWithDnD></DragAndDropWithDnD>
+          </Route>
+          <Route path="/skeletonloading">
+            <Profiles></Profiles>
           </Route>
         </Switch>
       </div>
