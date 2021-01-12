@@ -44,8 +44,8 @@ function DragAndDropWithDnD() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="characters">
             {(provided) => (

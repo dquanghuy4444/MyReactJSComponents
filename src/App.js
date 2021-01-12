@@ -11,52 +11,92 @@ import Suggestions from './components/Suggestions/Suggestions';
 import DragAndDrop from './components/DragAndDrop/DragAndDrop';
 import DragAndDropWithDnD from './components/DragAndDropWithDnD/DragAndDropWithDnD';
 import Profiles from './components/SkeletonLoading/Profiles';
+import DragAndDropFileWithDropzone from './components/DragAndDropFileWithDropzone/DragAndDropFileWithDropzone';
+import InfinityScroll from './components/InfinityScroll/App';
+import InfinityScrollWithReactInfiniteScroll from './components/InfinityScrollWithReactInfiniteScroll/App';
+
+const links =[
+  {
+    to:"/",
+    text:"Image Slider",
+    comp:<ImageSlider slides={ SliderData }></ImageSlider>
+  },
+  {
+    to:"/suggest",
+    text:"Input suggestions",
+    comp:<Suggestions></Suggestions>
+  },
+  {
+    to:"/draganddrop",
+    text:"Drag And Drop",
+    comp:<DragAndDrop></DragAndDrop>
+  },
+  {
+    to:"/draganddropwithdnd",
+    text:"Drag And Drop (react-beautiful-dnd)",
+    comp:<DragAndDropWithDnD></DragAndDropWithDnD>
+  },
+  {
+    to:"/skeletonloading",
+    text:"Skeleton Loading",
+    comp:<Profiles></Profiles>
+  },
+  {
+    to:"/draganddropfilewithdropzone",
+    text:"Drag And Drop File (react-dropzone)",
+    comp:<DragAndDropFileWithDropzone></DragAndDropFileWithDropzone>
+  },
+  {
+    to:"/infinityscroll",
+    text:"Infinity Scroll",
+    comp:<InfinityScroll></InfinityScroll>
+  },
+  {
+    to:"/infinityscrollwithreactinfinitescroll",
+    text:"Infinity Scroll (react-infinite-scroll-component)",
+    comp:<InfinityScrollWithReactInfiniteScroll></InfinityScrollWithReactInfiniteScroll>
+  },
+]
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Image Slider</Link>
-            </li>
-            <li>
-              <Link to="/suggest">Input suggestions</Link>
-            </li>
-            <li>
-              <Link to="/draganddrop">Drag And Drop</Link>
-            </li>
-            <li>
-              <Link to="/draganddropwithdnd">Drag And Drop With React Beautiful DnD</Link>
-            </li>
-            <li>
-              <Link to="/skeletonloading">Skeleton Loading</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/" exact>
-            <ImageSlider slides={ SliderData }></ImageSlider>
-          </Route>
-          <Route path="/suggest">
-            <Suggestions></Suggestions>
-          </Route>
-          <Route path="/draganddrop">
-            <DragAndDrop></DragAndDrop>
-          </Route>
-          <Route path="/draganddropwithdnd">
-            <DragAndDropWithDnD></DragAndDropWithDnD>
-          </Route>
-          <Route path="/skeletonloading">
-            <Profiles></Profiles>
-          </Route>
-        </Switch>
+    <Router>
+      <div className="App">
+
+          <div className="navbar">
+            <nav>
+              <ul>
+                {
+                  links.map(link =>(
+                    <li>
+                    <Link to={ link.to }>
+                      { link.text }
+                    </Link>
+                  </li>
+                  ))
+                }
+              </ul>
+            </nav>
+          </div>
+          <div className="container">
+            <Switch>
+              <Route path="/" exact>
+                <ImageSlider slides={ SliderData }></ImageSlider>
+              </Route>
+              {
+                  links.map(link =>(
+                    <Route path={ link.to } exact>
+                      {
+                        link.comp
+                      }
+                    </Route>
+                  ))
+                }
+            </Switch>
+          </div>
+        
       </div>
     </Router>
-      
-    </div>
   );
 }
 
