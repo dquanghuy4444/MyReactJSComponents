@@ -14,12 +14,18 @@ import Profiles from './components/SkeletonLoading/Profiles';
 import DragAndDropFileWithDropzone from './components/DragAndDropFileWithDropzone/DragAndDropFileWithDropzone';
 import InfinityScroll from './components/InfinityScroll/App';
 import InfinityScrollWithReactInfiniteScroll from './components/InfinityScrollWithReactInfiniteScroll/App';
+import CustomHook from './components/CustomHook/CustomHook';
 
 const links =[
   {
     to:"/",
     text:"Image Slider",
     comp:<ImageSlider slides={ SliderData }></ImageSlider>
+  },
+  {
+    to:"/customhooks",
+    text:"Custom Hooks",
+    comp:<CustomHook></CustomHook>
   },
   {
     to:"/suggest",
