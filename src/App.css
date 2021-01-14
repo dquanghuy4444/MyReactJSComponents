@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .App{
   position: relative;
   width: 100vw;
@@ -12,10 +16,11 @@
 
 .navbar{
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  width: 15%;
+  width: 20%;
   height: 100%;
   position: absolute;
   top: 0;
+  overflow: auto;
 }
 
 li{
@@ -34,10 +39,10 @@ ul a{
 
 .container{
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-  width: 85%;
+  width: 80%;
   height: 100%;
   position: absolute;
-  left: 15%;
+  left: 20%;
   padding: 1rem;
-  overflow: auto;
+  /* overflow: auto; */
 }

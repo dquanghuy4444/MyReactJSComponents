@@ -15,9 +15,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    font-family: sans-serif;
-  }
+
 `;
 
 const WrapperImages = styled.section`
@@ -51,10 +49,10 @@ function InfinityScrollWithReactInfiniteScroll() {
 
   return (
     <div>
-
       <GlobalStyle />
       <InfiniteScroll
         dataLength={images.length}
+        height={600}
         next={fetchImages}
         hasMore={true}
         loader={<Loader />}
