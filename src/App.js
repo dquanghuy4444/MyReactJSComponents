@@ -15,6 +15,7 @@ import DragAndDropFileWithDropzone from './components/DragAndDropFileWithDropzon
 import InfinityScroll from './components/InfinityScroll/App';
 import InfinityScrollWithReactInfiniteScroll from './components/InfinityScrollWithReactInfiniteScroll/App';
 import CustomHook from './components/CustomHook/CustomHook';
+import GuidedTourWithReactJoyride from './components/GuidedTourWithReactJoyride/GuidedTourWithReactJoyride';
 
 const links =[
   {
@@ -62,6 +63,11 @@ const links =[
     text:"Infinity Scroll (react-infinite-scroll-component)",
     comp:<InfinityScrollWithReactInfiniteScroll></InfinityScrollWithReactInfiniteScroll>
   },
+  {
+    to:"/guidedtourwithreactjoyride",
+    text:"Guided Tour (react-joyride)",
+    comp: <GuidedTourWithReactJoyride></GuidedTourWithReactJoyride>
+  },
 ]
 
 function App() {
@@ -74,11 +80,12 @@ function App() {
               <ul>
                 {
                   links.map(link =>(
-                    <li>
                     <Link to={ link.to }>
-                      { link.text }
+                      <li>
+                        { link.text }
+                      </li>
                     </Link>
-                  </li>
+
                   ))
                 }
               </ul>
@@ -100,7 +107,6 @@ function App() {
                 }
             </Switch>
           </div>
-        
       </div>
     </Router>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "react_slidercarousel",
+  "name": "pohip_components",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "react-dropzone": "^11.2.4",
     "react-icons": "^4.1.0",
     "react-infinite-scroll-component": "^5.1.0",
+    "react-joyride": "^2.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",

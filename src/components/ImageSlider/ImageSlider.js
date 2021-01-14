@@ -28,7 +28,7 @@ function ImageSlider({slides}) {
             SliderData.map((slide , index) =>{
                 return (
                   <div className={ index === current ? "slide active" : "slide"} key={ index }>
-                    { index === current && <img src={ slide.src } className="img"></img> }
+                    { index === current && <img src={ slide.src } className="img" alt=""></img> }
                   </div>
                 )
             })
