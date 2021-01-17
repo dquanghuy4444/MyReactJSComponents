@@ -39,10 +39,17 @@ ul a{
 
 .container{
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  max-width: 80%;
+  max-height: 100%;
   width: 80%;
   height: 100%;
   position: absolute;
   left: 20%;
   padding: 1rem;
   /* overflow: auto; */
+}
+
+.gridcontainer{
+  height: 500px;
+  overflow: auto;
 }

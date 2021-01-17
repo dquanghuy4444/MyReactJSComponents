@@ -16,6 +16,10 @@ import InfinityScroll from './components/InfinityScroll/App';
 import InfinityScrollWithReactInfiniteScroll from './components/InfinityScrollWithReactInfiniteScroll/App';
 import CustomHook from './components/CustomHook/CustomHook';
 import GuidedTourWithReactJoyride from './components/GuidedTourWithReactJoyride/GuidedTourWithReactJoyride';
+import GeneratePdfFromImageWithJspdf from './components/GeneratePdfFromImageWithJspdf/GeneratePdfFromImageWithJspdf';
+import LazyLoadingWithReactLazyLoadImageComp from './components/LazyLoadingWithReactLazyLoadImageComp/LazyLoadingWithReactLazyLoadImageComp';
+import HighlightTextWithReactHighlightWords from './components/HighlightTextWithReactHighlightWords/HighlightTextWithReactHighlightWords';
+import HighlightText from './components/HighlightText/HighlightText';
 
 const links =[
   {
@@ -67,6 +71,26 @@ const links =[
     to:"/guidedtourwithreactjoyride",
     text:"Guided Tour (react-joyride)",
     comp: <GuidedTourWithReactJoyride></GuidedTourWithReactJoyride>
+  },
+  {
+    to:"/highlighttext",
+    text:"Highlight Text ",
+    comp: <HighlightText></HighlightText>
+  },
+  {
+    to:"/highlighttextwithreacthighlightwords",
+    text:"Highlight Text (react-highlight-words)",
+    comp: <HighlightTextWithReactHighlightWords></HighlightTextWithReactHighlightWords>
+  },
+  {
+    to:"/lazyloadingwithreactlazyloadimagecomp",
+    text:"Lazy Loading (react-lazy-loading-component)",
+    comp: <LazyLoadingWithReactLazyLoadImageComp></LazyLoadingWithReactLazyLoadImageComp>
+  },
+  {
+    to:"/generatepdfromImagewithjspdf",
+    text:"Generate Pdf From Image (Jspdf)",
+    comp: <GeneratePdfFromImageWithJspdf></GeneratePdfFromImageWithJspdf>
   },
 ]
 
