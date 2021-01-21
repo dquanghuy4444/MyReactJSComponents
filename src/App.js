@@ -20,6 +20,8 @@ import GeneratePdfFromImageWithJspdf from './components/GeneratePdfFromImageWith
 import LazyLoadingWithReactLazyLoadImageComp from './components/LazyLoadingWithReactLazyLoadImageComp/LazyLoadingWithReactLazyLoadImageComp';
 import HighlightTextWithReactHighlightWords from './components/HighlightTextWithReactHighlightWords/HighlightTextWithReactHighlightWords';
 import HighlightText from './components/HighlightText/HighlightText';
+import ConnectionType from './components/ConnectionType/ConnectionType';
+import MultiLanguageWithI18Next from './components/MultiLanguageWithI18Next/MultiLanguageWithI18Next';
 
 const links =[
   {
@@ -88,9 +90,19 @@ const links =[
     comp: <LazyLoadingWithReactLazyLoadImageComp></LazyLoadingWithReactLazyLoadImageComp>
   },
   {
+    to:"/connectiontype",
+    text:"Connection Type",
+    comp: <ConnectionType></ConnectionType>
+  },
+  {
     to:"/generatepdfromImagewithjspdf",
     text:"Generate Pdf From Image (Jspdf)",
     comp: <GeneratePdfFromImageWithJspdf></GeneratePdfFromImageWithJspdf>
+  },
+  {
+    to:"/multilanguagewithi18n",
+    text:"Multi Language (i18next)",
+    comp: <MultiLanguageWithI18Next></MultiLanguageWithI18Next>
   },
 ]
 
