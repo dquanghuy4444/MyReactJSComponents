@@ -10,7 +10,6 @@ const IMAGES = [
 const ImageZoomWithReactZoomPanPinch = () => {
   return (
     <>
-
       <div className="row">
         <div className="col text-center">
           <h2>Zoomable Image</h2>

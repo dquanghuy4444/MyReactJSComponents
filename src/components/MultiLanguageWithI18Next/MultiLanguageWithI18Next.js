@@ -11,8 +11,8 @@ function MultiLanguageWithI18Next() {
 
   return (
     <I18nPropvider locale={locale}>
-      <div className="App">
-        <header className="App-header">
+      <div className="">
+        <header className="">
           <h1>
             <FormattedMessage id="hello" />
           </h1>

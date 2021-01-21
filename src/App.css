@@ -46,7 +46,7 @@ ul a{
   position: absolute;
   left: 20%;
   padding: 1rem;
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 .gridcontainer{
