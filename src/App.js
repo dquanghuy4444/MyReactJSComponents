@@ -22,6 +22,10 @@ import HighlightTextWithReactHighlightWords from './components/HighlightTextWith
 import HighlightText from './components/HighlightText/HighlightText';
 import ConnectionType from './components/ConnectionType/ConnectionType';
 import MultiLanguageWithI18Next from './components/MultiLanguageWithI18Next/MultiLanguageWithI18Next';
+import AutoComplete from './components/AutoComplete/AutoComplete';
+import SearchFilter from './components/SearchFilter/SearchFilter';
+import ImageZoomWithReactZoomPanPinch from './components/ImageZoomWithReactZoomPanPinch/ImageZoomWithReactZoomPanPinch';
+
 
 const links =[
   {
@@ -38,6 +42,16 @@ const links =[
     to:"/suggest",
     text:"Input suggestions",
     comp:<Suggestions></Suggestions>
+  },
+  {
+    to:"/autocomplete",
+    text:"Auto Complete",
+    comp:<AutoComplete></AutoComplete>
+  },
+  {
+    to:"/searchfilter",
+    text:"Search Filter",
+    comp:<SearchFilter></SearchFilter>
   },
   {
     to:"/draganddrop",
@@ -103,6 +117,11 @@ const links =[
     to:"/multilanguagewithi18n",
     text:"Multi Language (i18next)",
     comp: <MultiLanguageWithI18Next></MultiLanguageWithI18Next>
+  },
+  {
+    to:"/imagezoomwithreactzoompanpinch",
+    text:"Image Zoom (react-zoom-pan-pinch)",
+    comp: <ImageZoomWithReactZoomPanPinch></ImageZoomWithReactZoomPanPinch>
   },
 ]
 
