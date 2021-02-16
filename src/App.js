@@ -27,6 +27,7 @@ import SearchFilter from './components/SearchFilter/SearchFilter';
 import ImageZoomWithReactZoomPanPinch from './components/ImageZoom-ReactZoomPanPinch/ImageZoomWithReactZoomPanPinch';
 import PlayAndPauseGifWithReactGifPlayer from './components/PlayAndPauseGif-ReactGifPlayer/PlayAndPauseGifWithReactGifPlayer';
 import ParallaxTiltWithReactParallaxTilt from './components/ParallaxTilt-ReactParallaxTilt/ParallaxTiltWithReactParallaxTilt';
+import DatePickerWithRcDatePicker from './components/DatePicker-RcDatePicker/DatePickerWithRcDatePicker';
 
 
 const links =[
@@ -134,6 +135,11 @@ const links =[
     to:"/parallaxtiltwithreactparallaxtilt",
     text:"Parallax Tilt (react-parallax-tilt)",
     comp: <ParallaxTiltWithReactParallaxTilt></ParallaxTiltWithReactParallaxTilt>
+  },
+  {
+    to:"/datepickerwithrcdatepicker",
+    text:"Date Picker (rc-datepicker)",
+    comp: <DatePickerWithRcDatePicker></DatePickerWithRcDatePicker>
   },
 ]
 
