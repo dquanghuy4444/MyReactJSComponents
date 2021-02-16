@@ -9,22 +9,24 @@ import {
 } from "react-router-dom";
 import Suggestions from './components/Suggestions/Suggestions';
 import DragAndDrop from './components/DragAndDrop/DragAndDrop';
-import DragAndDropWithDnD from './components/DragAndDropWithDnD/DragAndDropWithDnD';
+import DragAndDropWithDnD from './components/DragAndDrop-DnD/DragAndDropWithDnD';
 import Profiles from './components/SkeletonLoading/Profiles';
-import DragAndDropFileWithDropzone from './components/DragAndDropFileWithDropzone/DragAndDropFileWithDropzone';
+import DragAndDropFileWithDropzone from './components/DragAndDropFile-Dropzone/DragAndDropFileWithDropzone';
 import InfinityScroll from './components/InfinityScroll/App';
-import InfinityScrollWithReactInfiniteScroll from './components/InfinityScrollWithReactInfiniteScroll/App';
+import InfinityScrollWithReactInfiniteScroll from './components/InfinityScroll-ReactInfiniteScroll/App';
 import CustomHook from './components/CustomHook/CustomHook';
-import GuidedTourWithReactJoyride from './components/GuidedTourWithReactJoyride/GuidedTourWithReactJoyride';
-import GeneratePdfFromImageWithJspdf from './components/GeneratePdfFromImageWithJspdf/GeneratePdfFromImageWithJspdf';
-import LazyLoadingWithReactLazyLoadImageComp from './components/LazyLoadingWithReactLazyLoadImageComp/LazyLoadingWithReactLazyLoadImageComp';
-import HighlightTextWithReactHighlightWords from './components/HighlightTextWithReactHighlightWords/HighlightTextWithReactHighlightWords';
+import GuidedTourWithReactJoyride from './components/GuidedTour-ReactJoyride/GuidedTourWithReactJoyride';
+import GeneratePdfFromImageWithJspdf from './components/GeneratePdfFromImage-Jspdf/GeneratePdfFromImageWithJspdf';
+import LazyLoadingWithReactLazyLoadImageComp from './components/LazyLoading-ReactLazyLoadImageComp/LazyLoadingWithReactLazyLoadImageComp';
+import HighlightTextWithReactHighlightWords from './components/HighlightText-ReactHighlightWords/HighlightTextWithReactHighlightWords';
 import HighlightText from './components/HighlightText/HighlightText';
 import ConnectionType from './components/ConnectionType/ConnectionType';
-import MultiLanguageWithI18Next from './components/MultiLanguageWithI18Next/MultiLanguageWithI18Next';
+import MultiLanguageWithI18Next from './components/MultiLanguage-I18Next/MultiLanguageWithI18Next';
 import AutoComplete from './components/AutoComplete/AutoComplete';
 import SearchFilter from './components/SearchFilter/SearchFilter';
-import ImageZoomWithReactZoomPanPinch from './components/ImageZoomWithReactZoomPanPinch/ImageZoomWithReactZoomPanPinch';
+import ImageZoomWithReactZoomPanPinch from './components/ImageZoom-ReactZoomPanPinch/ImageZoomWithReactZoomPanPinch';
+import PlayAndPauseGifWithReactGifPlayer from './components/PlayAndPauseGif-ReactGifPlayer/PlayAndPauseGifWithReactGifPlayer';
+import ParallaxTiltWithReactParallaxTilt from './components/ParallaxTilt-ReactParallaxTilt/ParallaxTiltWithReactParallaxTilt';
 
 
 const links =[
@@ -122,6 +124,16 @@ const links =[
     to:"/imagezoomwithreactzoompanpinch",
     text:"Image Zoom (react-zoom-pan-pinch)",
     comp: <ImageZoomWithReactZoomPanPinch></ImageZoomWithReactZoomPanPinch>
+  },
+  {
+    to:"/playandpausegifwithreactgifplayer",
+    text:"Play and pause gif (react-gif-player)",
+    comp: <PlayAndPauseGifWithReactGifPlayer></PlayAndPauseGifWithReactGifPlayer>
+  },
+  {
+    to:"/parallaxtiltwithreactparallaxtilt",
+    text:"Parallax Tilt (react-parallax-tilt)",
+    comp: <ParallaxTiltWithReactParallaxTilt></ParallaxTiltWithReactParallaxTilt>
   },
 ]
 

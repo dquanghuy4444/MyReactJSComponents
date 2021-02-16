@@ -1,5 +1,13 @@
 import React , { useEffect, useState } from 'react';
+import { Controlled as CodeMirror } from "react-codemirror2";
+import "codemirror/theme/dracula.css";
+import"codemirror/mode/xml/xml";
+import "codemirror/mode/markdown/markdown";
 import './CustomHook.css';
+import { Code } from '@material-ui/icons';
+
+let hBeautify = require("js-beautify").html;
+
 const customhooks = [
     {
         id:1,
@@ -514,6 +522,141 @@ const customhooks = [
         }
         `
     },
+    {
+        id:15,
+        name:"useWindowSize",
+        htmlEl : `
+        import { useLayoutEffect, useState } from "react";
+
+        // resize screen
+        export function useWindowSize() {
+            const [size, setSize] = useState({
+            width:0,
+            height:0,
+            });
+            useLayoutEffect(() => {
+            function updateSize() {
+                setSize({
+                width: window.innerWidth, 
+                height: window.innerHeight
+                });
+            }
+            window.addEventListener('resize', updateSize);
+            updateSize();
+            return () => window.removeEventListener('resize', updateSize);
+            }, []);
+            return size;
+        }
+        `
+    },
+    {
+        id:16,
+        name:"useEventListener",
+        htmlEl : `
+        import { useRef, useEffect, RefObject } from 'react';
+
+        function useEventListener<T extends HTMLElement = HTMLDivElement>(
+            eventName: string,
+            handler: (event: Event) => void,
+            element?: RefObject<T>,
+        ) {
+            // Create a ref that stores handler
+            const savedHandler = useRef<(event: Event) => void>()
+            useEffect(() => {
+                // Define the listening target
+                const targetElement: T | Window = element?.current || window
+                if (!(targetElement && targetElement.addEventListener)) {
+                    return
+                }
+                // Update savaed handler if necessary
+                if (savedHandler.current !== handler) {
+                    savedHandler.current = handler
+                }
+                // Create event listener that calls handler function stored in ref
+                const eventListener = (event: Event) => {
+                    // eslint-disable-next-line no-extra-boolean-cast
+                    if (!!savedHandler?.current) {
+                        savedHandler.current(event)
+                    }
+                }
+                targetElement.addEventListener(eventName, eventListener)
+                // Remove event listener on cleanup
+                return () => {
+                    targetElement.removeEventListener(eventName, eventListener)
+                }
+            }, [eventName, element, handler])
+        }
+        export default useEventListener
+        `
+    },
+    {
+        id:17,
+        name:"useQuery",
+        htmlEl : `
+        import { useState, useEffect, useCallback } from 'react'
+        import axios, { AxiosResponse } from 'axios'
+        
+        export default function useQuery<T>(url: string) {
+          const [data, setData] = useState<T>()
+          const [error, setError] = useState<string>()
+          const [loading, setLoading] = useState(false)
+        
+          const handleError = (error: any) => {
+            setError(error.response?.data.err)
+            setLoading(false)
+          }
+        
+          // this function is calling useCallback to stop an infinite loop since it is in the dependency array of useEffect
+          const runQuery = useCallback(() => {
+            const handleSuccess = (res: AxiosResponse<T>) => {
+              setData(res.data)
+              setLoading(false)
+            }
+        
+            setLoading(true)
+            axios.get<T>(url).then(handleSuccess).catch(handleError)
+          }, [url])
+        
+          useEffect(() => {
+            runQuery()
+          }, [runQuery])
+        
+          return { data, loading, error, refetch: runQuery }
+        }
+
+        import { Fragment } from 'react'
+import useQuery from './useQuery'
+
+// type data from https://jsonplaceholder.typicode.com/posts
+type Post = {
+  userId: number
+  id: number
+  title: string
+  body: string
+}
+
+export default function Posts() {
+  const { data: posts, loading, error } = useQuery<Post[]>('https://jsonplaceholder.typicode.com/posts')
+
+  if (error) {
+    return <p>Error: {error}</p>
+  } else if (loading) {
+    return <p>Loading...</p>
+  }
+
+  return (
+    <>
+      {posts.map(({ title, body }, index) => (
+        <Fragment key={index}>
+          <h1>{title}</h1>
+          <p>{body}</p>
+        </Fragment>
+      ))}
+    </>
+  )
+}
+        `
+    },
 
 ]
 
@@ -525,6 +668,52 @@ function CustomHook() {
     useEffect(() =>{
         setCustomhook(customhooks.find(ch => ch.id === id));
     },[id])
+
+    let code123 =`
+    const useInput = (initialValue, validator) => {
+        const [value, setValue] = useState(initialValue);
+        const onChange = (event) => {
+            const {
+                target: { value }
+            } = event;
+            let willUpdate = true;
+            if (typeof validator === "function") {
+                willUpdate = validator(value);
+            }
+            if (willUpdate) {
+                setValue(value);
+            }
+        };
+        return { value, onChange };
+    };
+
+    function App() {
+        const maxLen = (value) => value.length < 10;
+        const name = useInput("your name", maxLen);
+        return (
+        <div className="App">
+            <h1>Hello</h1>
+                <input placeholder="Name" {...name} />
+        </div>
+        );
+    }`;
+
+    const autoFormatSelection = () => {
+        // console.log(code);
+        let formatedHTML = hBeautify(code123, { indent_size: 2 });
+        return formatedHTML;
+      };
+
+    let options = {
+        height: "150px",
+        lineNumbers: true,
+        tabSize: 2,
+        theme: "dracula",
+        extraKeys: { "Shift-Tab": autoFormatSelection },
+        // theme: 'monokai',
+        keyMap: 'sublime',
+        mode: 'javascript',
+      };
 
     return (
         <div className="customhooks-container">
@@ -546,8 +735,15 @@ function CustomHook() {
                 <textarea value={ customhook.htmlEl }>
                 </textarea>
             </div>
+
+            <CodeMirror
+            value={code123}
+            options={options}
+            />
         </div>
     );
 }
 
 export default CustomHook;
+
+
