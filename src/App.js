@@ -28,6 +28,10 @@ import ImageZoomWithReactZoomPanPinch from './components/ImageZoom-ReactZoomPanP
 import PlayAndPauseGifWithReactGifPlayer from './components/PlayAndPauseGif-ReactGifPlayer/PlayAndPauseGifWithReactGifPlayer';
 import ParallaxTiltWithReactParallaxTilt from './components/ParallaxTilt-ReactParallaxTilt/ParallaxTiltWithReactParallaxTilt';
 import DatePickerWithRcDatePicker from './components/DatePicker-RcDatePicker/DatePickerWithRcDatePicker';
+import ContextMenu from './components/ContextMenu/ContextMenu';
+import RizingImage from './components/RizingImage/RizingImage';
+import ConvertImagesIntoText from './components/ConvertImagesIntoText/ConvertImagesIntoText';
+import EmailJS from './components/EmailJS/EmailJS';
 
 
 const links =[
@@ -140,6 +144,26 @@ const links =[
     to:"/datepickerwithrcdatepicker",
     text:"Date Picker (rc-datepicker)",
     comp: <DatePickerWithRcDatePicker></DatePickerWithRcDatePicker>
+  },
+  {
+    to:"/contextmenu",
+    text:"Custom right click ( Context menu )",
+    comp: <ContextMenu></ContextMenu>
+  },
+  {
+    to:"/rizingimage",
+    text:"Rizing image",
+    comp: <RizingImage></RizingImage>
+  },
+  {
+    to:"/convertimagesintotext",
+    text:"Convert image to text",
+    comp: <ConvertImagesIntoText></ConvertImagesIntoText>
+  },
+  {
+    to:"/emailjs",
+    text:"EmailJS",
+    comp: <EmailJS></EmailJS>
   },
 ]
 
