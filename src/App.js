@@ -32,6 +32,7 @@ import ContextMenu from './components/ContextMenu/ContextMenu';
 import RizingImage from './components/RizingImage/RizingImage';
 import ConvertImagesIntoText from './components/ConvertImagesIntoText/ConvertImagesIntoText';
 import EmailJS from './components/EmailJS/EmailJS';
+import CustomCursor from './components/CustomCursor/CustomCursor';
 
 
 const links =[
@@ -164,6 +165,11 @@ const links =[
     to:"/emailjs",
     text:"EmailJS",
     comp: <EmailJS></EmailJS>
+  },
+  {
+    to:"/customcursor",
+    text:"Custom Cursor",
+    comp: <CustomCursor></CustomCursor>
   },
 ]
 
