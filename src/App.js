@@ -173,6 +173,10 @@ const links =[
   },
 ]
 
+const linksTemp = links.sort(function(a,b){
+  return a.text.localeCompare(b.text);
+})
+
 function App() {
   return (
     <Router>
@@ -182,7 +186,7 @@ function App() {
             <nav>
               <ul>
                 {
-                  links.map(link =>(
+                  linksTemp.map(link =>(
                     <Link to={ link.to }>
                       <li>
                         { link.text }
