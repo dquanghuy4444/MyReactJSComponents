@@ -33,6 +33,7 @@ import RizingImage from './components/RizingImage/RizingImage';
 import ConvertImagesIntoText from './components/ConvertImagesIntoText/ConvertImagesIntoText';
 import EmailJS from './components/EmailJS/EmailJS';
 import CustomCursor from './components/CustomCursor/CustomCursor';
+import ScrollIndicatorBar from './components/ScrollIndicatorBar/ScrollIndicatorBar';
 
 
 const links =[
@@ -171,6 +172,11 @@ const links =[
     text:"Custom Cursor",
     comp: <CustomCursor></CustomCursor>
   },
+  {
+    to:"/scrollindicatorbar",
+    text:"Scroll Indicator Bar",
+    comp: <ScrollIndicatorBar></ScrollIndicatorBar>
+  },
 ]
 
 const linksTemp = links.sort(function(a,b){
@@ -181,7 +187,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-
           <div className="navbar">
             <nav>
               <ul>
