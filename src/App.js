@@ -34,6 +34,7 @@ import ConvertImagesIntoText from './components/ConvertImagesIntoText/ConvertIma
 import EmailJS from './components/EmailJS/EmailJS';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollIndicatorBar from './components/ScrollIndicatorBar/ScrollIndicatorBar';
+import CustomMentionEditor from './components/EditorMention-DraftJS/EditorMention';
 
 
 const links =[
@@ -176,6 +177,11 @@ const links =[
     to:"/scrollindicatorbar",
     text:"Scroll Indicator Bar",
     comp: <ScrollIndicatorBar></ScrollIndicatorBar>
+  },
+  {
+    to:"/editormention",
+    text:"Editor Mention (draft-js)",
+    comp: <CustomMentionEditor></CustomMentionEditor>
   },
 ]
 
