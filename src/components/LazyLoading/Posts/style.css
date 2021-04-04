@@ -1,0 +1,21 @@
+.posts {
+    position: relative;
+  }
+  
+  .posts .post:nth-child(odd) {
+    background: lightgrey;
+  }
+  
+  .trigger {
+    visibility: hidden;
+    background: rebeccapurple;
+    color: white;
+    padding: 2.5vh;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .trigger.visible {
+    visibility: visible;
+  }
+  

@@ -36,6 +36,7 @@ import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollIndicatorBar from './components/ScrollIndicatorBar/ScrollIndicatorBar';
 import CustomMentionEditor from './components/EditorMention-DraftJS/EditorMention';
 import DarkMode from './components/DarkMode/DarkMode';
+import LazyLoading from './components/LazyLoading/LazyLoading';
 
 
 const links =[
@@ -188,6 +189,11 @@ const links =[
     to:"/darkmode",
     text:"Dark Mode",
     comp: <DarkMode></DarkMode>
+  },
+  {
+    to:"/lazyloading",
+    text:"Lazy Loading",
+    comp: <LazyLoading></LazyLoading>
   },
 ]
 

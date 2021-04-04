@@ -1,0 +1,21 @@
+.post {
+  padding: 5vw;
+}
+
+.post p {
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+}
+
+.tags a {
+  color: rebeccapurple;
+}
+
+.tags a:hover,
+.tags a:focus-visible {
+  text-decoration: none;
+}
