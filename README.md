@@ -1,1 +1,1 @@
-https://pohipcomponents.netlify.app/
+https://pohip-components.netlify.app/
