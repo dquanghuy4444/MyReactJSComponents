@@ -35,6 +35,7 @@ import EmailJS from './components/EmailJS/EmailJS';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import ScrollIndicatorBar from './components/ScrollIndicatorBar/ScrollIndicatorBar';
 import CustomMentionEditor from './components/EditorMention-DraftJS/EditorMention';
+import DarkMode from './components/DarkMode/DarkMode';
 
 
 const links =[
@@ -182,6 +183,11 @@ const links =[
     to:"/editormention",
     text:"Editor Mention (draft-js)",
     comp: <CustomMentionEditor></CustomMentionEditor>
+  },
+  {
+    to:"/darkmode",
+    text:"Dark Mode",
+    comp: <DarkMode></DarkMode>
   },
 ]
 
