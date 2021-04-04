@@ -37,6 +37,7 @@ import ScrollIndicatorBar from './components/ScrollIndicatorBar/ScrollIndicatorB
 import CustomMentionEditor from './components/EditorMention-DraftJS/EditorMention';
 import DarkMode from './components/DarkMode/DarkMode';
 import LazyLoading from './components/LazyLoading/LazyLoading';
+import CloseWhenClickOutside from './components/CloseWhenClickOutside/CloseWhenClickOutside';
 
 
 const links =[
@@ -194,6 +195,11 @@ const links =[
     to:"/lazyloading",
     text:"Lazy Loading",
     comp: <LazyLoading></LazyLoading>
+  },
+  {
+    to:"/closewhenclickoutside",
+    text:"Close When Click Outside",
+    comp: <CloseWhenClickOutside></CloseWhenClickOutside>
   },
 ]
 
