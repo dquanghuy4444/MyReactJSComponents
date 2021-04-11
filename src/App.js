@@ -38,6 +38,7 @@ import CustomMentionEditor from './components/EditorMention-DraftJS/EditorMentio
 import DarkMode from './components/DarkMode/DarkMode';
 import LazyLoading from './components/LazyLoading/LazyLoading';
 import CloseWhenClickOutside from './components/CloseWhenClickOutside/CloseWhenClickOutside';
+import EventBus from './components/EventBus/EventBus';
 
 
 const links =[
@@ -200,6 +201,11 @@ const links =[
     to:"/closewhenclickoutside",
     text:"Close When Click Outside",
     comp: <CloseWhenClickOutside></CloseWhenClickOutside>
+  },
+  {
+    to:"/eventbus",
+    text:"Event Bus",
+    comp: <EventBus></EventBus>
   },
 ]
 
