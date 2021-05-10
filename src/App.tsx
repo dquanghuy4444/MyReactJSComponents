@@ -39,6 +39,7 @@ import DarkMode from './components/DarkMode/DarkMode';
 import LazyLoading from './components/LazyLoading/LazyLoading';
 import CloseWhenClickOutside from './components/CloseWhenClickOutside/CloseWhenClickOutside';
 import EventBus from './components/EventBus/EventBus';
+import DropZone from './components/DropZone/DropZone';
 
 
 const links =[
@@ -206,6 +207,11 @@ const links =[
     to:"/eventbus",
     text:"Event Bus",
     comp: <EventBus></EventBus>
+  },
+  {
+    to:"/dropzone",
+    text:"Drop Zone",
+    comp: <DropZone></DropZone>
   },
 ]
 

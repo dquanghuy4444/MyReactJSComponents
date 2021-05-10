@@ -1,7 +1,7 @@
 import './GuidedTourWithReactJoyride.css';
 import Joyride, { CallBackProps, STATUS, Step, StoreHelpers } from 'react-joyride';
 
-function GuidedTourWithReactJoyride({slides}) { 
+function GuidedTourWithReactJoyride() { 
   
   const steps = [
     {

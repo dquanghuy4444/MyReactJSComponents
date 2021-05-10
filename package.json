@@ -28,6 +28,7 @@
     "js-beautify": "^1.13.5",
     "jspdf": "^2.2.0",
     "moment": "^2.29.1",
+    "node-sass": "^4.14.1",
     "npm": "^7.7.5",
     "prop-types": "^15.7.2",
     "rc-datepicker": "^5.0.16",
@@ -75,5 +76,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.7"
   }
 }
