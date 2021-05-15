@@ -40,6 +40,7 @@ import LazyLoading from './components/LazyLoading/LazyLoading';
 import CloseWhenClickOutside from './components/CloseWhenClickOutside/CloseWhenClickOutside';
 import EventBus from './components/EventBus/EventBus';
 import DropZone from './components/DropZone/DropZone';
+import MindNode from './components/MindNode-ReactFlow/node.components';
 
 
 const links =[
@@ -212,6 +213,11 @@ const links =[
     to:"/dropzone",
     text:"Drop Zone",
     comp: <DropZone></DropZone>
+  },
+  {
+    to:"/mindnode",
+    text:"Mind Node (React-Flow-Renderer)",
+    comp: <MindNode></MindNode>
   },
 ]
 
