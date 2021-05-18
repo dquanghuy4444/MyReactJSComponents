@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import './Suggestions.css';
-import { getSuggestions } from '../../api/Suggestions'
+import { getSuggestions } from '../../api/suggestions'
 function Suggestions() {
 
     const [searchField , setSearchField] = useState('');

@@ -1,45 +1,37 @@
-import React , { useEffect, useState } from 'react';
-import { Controlled as CodeMirror } from "react-codemirror2";
-import "codemirror/theme/dracula.css";
-import"codemirror/mode/xml/xml";
-import "codemirror/mode/markdown/markdown";
-import 'codemirror/keymap/sublime';
-import './CustomHook.css';
-
-let hBeautify = require("js-beautify").html;
 
 const customhooks = [
     {
         id:1,
         name:"useInput",
         htmlEl : `
-        const useInput = (initialValue, validator) => {
-            const [value, setValue] = useState(initialValue);
-            const onChange = (event) => {
-                const {
-                    target: { value }
-                } = event;
-                let willUpdate = true;
-                if (typeof validator === "function") {
-                    willUpdate = validator(value);
-                }
-                if (willUpdate) {
-                    setValue(value);
-                }
-            };
-            return { value, onChange };
-        };
-        
-        function App() {
-            const maxLen = (value) => value.length < 10;
-            const name = useInput("your name", maxLen);
-            return (
-            <div className="App">
-                <h1>Hello</h1>
-                  <input placeholder="Name" {...name} />
-            </div>
-          );
-        }`
+const useInput = (initialValue, validator) => {
+const [value, setValue] = useState(initialValue);
+const onChange = (event) => {
+    const {
+        target: { value }
+    } = event;
+    let willUpdate = true;
+    if (typeof validator === "function") {
+        willUpdate = validator(value);
+    }
+    if (willUpdate) {
+        setValue(value);
+    }
+};
+return { value, onChange };
+};
+
+function App() {
+const maxLen = (value) => value.length < 10;
+const name = useInput("your name", maxLen);
+return (
+<div className="App">
+    <h1>Hello</h1>
+        <input placeholder="Name" {...name} />
+</div>
+);
+}
+`
     },
     {
         id:2,
@@ -822,90 +814,4 @@ const GetUsersButton = () => {
 
 ]
 
-function CustomHook() { 
-
-    const [customhook , setCustomhook] = useState({});
-    const [id , setId] = useState(1);
-
-    useEffect(() =>{
-        setCustomhook(customhooks.find(ch => ch.id === id));
-    },[id])
-
-    let code123 =`
-    const useInput = (initialValue, validator) => {
-        const [value, setValue] = useState(initialValue);
-        const onChange = (event) => {
-            const {
-                target: { value }
-            } = event;
-            let willUpdate = true;
-            if (typeof validator === "function") {
-                willUpdate = validator(value);
-            }
-            if (willUpdate) {
-                setValue(value);
-            }
-        };
-        return { value, onChange };
-    };
-
-    function App() {
-        const maxLen = (value) => value.length < 10;
-        const name = useInput("your name", maxLen);
-        return (
-        <div className="App">
-            <h1>Hello</h1>
-                <input placeholder="Name" {...name} />
-        </div>
-        );
-    }`;
-
-    const autoFormatSelection = () => {
-        // console.log(code);
-        let formatedHTML = hBeautify(code123, { indent_size: 2 });
-        return formatedHTML;
-      };
-
-    let options = {
-        height: "150px",
-        lineNumbers: true,
-        tabSize: 2,
-        theme: "dracula",
-        extraKeys: { "Shift-Tab": autoFormatSelection },
-        // theme: 'monokai',
-        keyMap: 'sublime',
-        mode: 'javascript',
-      };
-
-    return (
-        <div className="customhooks-container">
-            <div className="customhooks-navbar">
-                <nav>
-                    <ul>
-                        { 
-                            customhooks.map(ch => <li onClick={() => setId(ch.id) }>{ ch.name }</li> )
-                        }  
-                    </ul>
-                </nav>
-            </div>
-
-            <div>
-                {
-                    customhook.name
-                }
-                <br></br>
-                <textarea value={ customhook.htmlEl }>
-                </textarea>
-            </div>
-
-            {/* <CodeMirror
-            value={code123}
-            options={options}
-            /> */}
-        </div>
-    );
-}
-
-export default CustomHook;
-
-
+export { customhooks };

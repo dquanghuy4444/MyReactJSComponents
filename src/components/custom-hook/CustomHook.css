@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    display:flex;
 }
 
 .customhooks-container textarea{
@@ -35,3 +36,9 @@
     justify-content: center;
 }
 
+.customhooks-wrapper{
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    height:100%;
+}
