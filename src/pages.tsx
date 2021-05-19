@@ -3,36 +3,38 @@
 import ImageSlider from './components/image-slider/ImageSlider';
 import Suggestions from './components/suggestions/Suggestions';
 import DragAndDrop from './components/drag-nd-drop/DragAndDrop';
-import DragAndDropWithDnD from './components/drag-nd-drop-dnd/DragAndDropWithDnD';
+import DragAndDropWithDnD from './components/drag-nd-drop--dnd/DragAndDropWithDnD';
 import Profiles from './components/skeleton-loading/Profiles';
-import DragAndDropFileWithDropzone from './components/drag-nd-drop-file-dropzone/DragAndDropFileWithDropzone';
+import DragAndDropFileWithDropzone from './components/drag-nd-drop-file--dropzone/DragAndDropFileWithDropzone';
 import InfinityScroll from './components/infinity-scroll/App';
-import InfinityScrollWithReactInfiniteScroll from './components/infinity-scroll-reactinfinitescroll/App';
+import InfinityScrollWithReactInfiniteScroll from './components/infinity-scroll--reactinfinitescroll/App';
 import CustomHook from './components/custom-hook/CustomHook';
-import GuidedTourWithReactJoyride from './components/guided-tour-reactjoyride/GuidedTourWithReactJoyride';
-import LazyLoadingWithReactLazyLoadImageComp from './components/lazy-loading-reactlazyloading/LazyLoadingWithReactLazyLoadImageComp';
-import HighlightTextWithReactHighlightWords from './components/highlight-text-reacthighlightwords/HighlightTextWithReactHighlightWords';
+import GuidedTourWithReactJoyride from './components/guided-tour--reactjoyride/GuidedTourWithReactJoyride';
+import LazyLoadingWithReactLazyLoadImageComp from './components/lazy-loading--reactlazyloading/LazyLoadingWithReactLazyLoadImageComp';
+import HighlightTextWithReactHighlightWords from './components/highlight-text--reacthighlightwords/HighlightTextWithReactHighlightWords';
 import HighlightText from './components/highlight-text/HighlightText';
 import ConnectionType from './components/connection-type/ConnectionType';
-import MultiLanguageWithI18Next from './components/multi-language-i18next/MultiLanguageWithI18Next';
+import MultiLanguageWithI18Next from './components/multi-language--i18next/MultiLanguageWithI18Next';
 import AutoComplete from './components/auto-complete/AutoComplete';
 import SearchFilter from './components/search-filter/SearchFilter';
-import ImageZoomWithReactZoomPanPinch from './components/image-zoom-reactzoompanpinch/ImageZoomWithReactZoomPanPinch';
-import PlayAndPauseGifWithReactGifPlayer from './components/play-nd-pause-gif-reactgifplayer/PlayAndPauseGifWithReactGifPlayer';
-import ParallaxTiltWithReactParallaxTilt from './components/parallax-tilt-reactparallaxtilt/ParallaxTiltWithReactParallaxTilt';
-import DatePickerWithRcDatePicker from './components/date-picker-rcdatepicker/DatePickerWithRcDatePicker';
+import ImageZoomWithReactZoomPanPinch from './components/image-zoom--reactzoompanpinch/ImageZoomWithReactZoomPanPinch';
+import PlayAndPauseGifWithReactGifPlayer from './components/play-nd-pause-gif--reactgifplayer/PlayAndPauseGifWithReactGifPlayer';
+import ParallaxTiltWithReactParallaxTilt from './components/parallax-tilt--reactparallaxtilt/ParallaxTiltWithReactParallaxTilt';
+import DatePickerWithRcDatePicker from './components/date-picker--rcdatepicker/DatePickerWithRcDatePicker';
 import ContextMenu from './components/context-menu/ContextMenu';
 import RizingImage from './components/rizing-image/RizingImage';
 import EmailJS from './components/email-js/EmailJS';
 import CustomCursor from './components/custom-cursor/CustomCursor';
 import ScrollIndicatorBar from './components/scroll-indicator-bar/ScrollIndicatorBar';
-import CustomMentionEditor from './components/editor-mention-draftjs/EditorMention';
+import CustomMentionEditor from './components/editor-mention--draftjs/EditorMention';
 import DarkMode from './components/dark-mode/DarkMode';
 import LazyLoading from './components/lazy-loading/LazyLoading';
 import CloseWhenClickOutside from './components/close-when-click-outside/CloseWhenClickOutside';
 import EventBus from './components/event-bus/EventBus';
 import DropZone from './components/drop-zone/DropZone';
-import MindNode from './components/mind-node-reactflow/node.components';
+import MindNode from './components/mind-node--reactflow/node.components';
+import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/WorkWithCanvasWithFabricjs';
+
 import { SliderData } from './data/slider-data';
 
 const pages:any[] = [
@@ -200,6 +202,11 @@ const pages:any[] = [
       to:"/mindnode",
       text:"Mind Node (React-Flow-Renderer)",
       comp: <MindNode></MindNode>
+    },
+    {
+      to:"/workwithcanvaswithfabricjs",
+      text:"Work With Canvas (Fabricjs)",
+      comp: <WorkWithCanvasWithFabricjs></WorkWithCanvasWithFabricjs>
     },
 ]
 

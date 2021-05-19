@@ -2,6 +2,9 @@ import { useState } from "react";
 import "./DropZone.scss";
 import UploadFileScreen from "./upload-file/upload-file.screen";
 
+// import PSD from "psd-new";
+// var PSD = require('psd-new');
+
 function DropZone() {
   const [files, setFiles] = useState<any>([]);
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -28,9 +31,13 @@ function DropZone() {
     setIsDragging(false);
   }
 
-  const fileDrop = (event: any) =>{
+  function  fileDrop (event: any){
     event.preventDefault();
     setIsDragging(false);
+
+    // PSD.fromEvent(event).then(function (psd:any) {
+    //   console.log(psd.tree().export());
+    // }); 
 
     if(event.dataTransfer.files.length > 0){
       const fileList = event.dataTransfer.files;
@@ -42,7 +49,7 @@ function DropZone() {
 
         const pathFile = URL.createObjectURL(file); 
 
-        file["pathFile"] = pathFile
+        file["pathFile"] = pathFile;
         fileListTemp.push(file)
       }
       setFiles((prev:any) => [...prev , ...fileListTemp]);
