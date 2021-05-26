@@ -33,7 +33,7 @@ import CloseWhenClickOutside from './components/close-when-click-outside/CloseWh
 import EventBus from './components/event-bus/EventBus';
 import DropZone from './components/drop-zone/DropZone';
 import MindNode from './components/mind-node--reactflow/node.components';
-import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/WorkWithCanvasWithFabricjs';
+import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/work-with-canvas';
 
 import { SliderData } from './data/slider-data';
 

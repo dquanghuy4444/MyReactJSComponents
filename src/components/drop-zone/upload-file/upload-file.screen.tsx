@@ -1,6 +1,7 @@
 import React from 'react';
-import isFileImage from './is-file-image';
-import niceBytes from './nice-bytes';
+import isFileImage from '../../../utils/is-file-image';
+import niceBytes from '../../../utils/nice-bytes';
+
 import './upload-file.scss';
 
 function UploadFileScreen(props: any) {
