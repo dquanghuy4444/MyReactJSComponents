@@ -35,6 +35,10 @@ import DropZone from './components/drop-zone/DropZone';
 import MindNode from './components/mind-node--reactflow/node.components';
 import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/work-with-canvas';
 
+import DetectImagesLoaded from './components/detect-images-loaded';
+import VirtualizedScrollWithReactWindow from './components/virtualized-scroll--reactwindow';
+
+
 import { SliderData } from './data/slider-data';
 
 const pages:any[] = [
@@ -42,6 +46,16 @@ const pages:any[] = [
       to:"/",
       text:"Image Slider",
       comp:<ImageSlider slides={ SliderData }></ImageSlider>
+    },
+    {
+      to:"/detect-images-loaded",
+      text:"Detect Images Loaded",
+      comp:<DetectImagesLoaded></DetectImagesLoaded>
+    },
+    {
+      to:"/virtualized-scroll-reactwindow",
+      text:"Virtualized Scroll (react-window)",
+      comp:<VirtualizedScrollWithReactWindow></VirtualizedScrollWithReactWindow>
     },
     {
       to:"/customhooks",
