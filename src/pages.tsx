@@ -36,6 +36,7 @@ import MindNode from './components/mind-node--reactflow/node.components';
 import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/work-with-canvas';
 
 import DetectImagesLoaded from './components/detect-images-loaded';
+import Imine from './components/imine--imne--zustand';
 import InfinityScrollObserver from './components/infinity-scroll-observe';
 import VirtualizedScrollWithReactWindow from './components/virtualized-scroll--reactwindow';
 
@@ -52,6 +53,11 @@ const pages:any[] = [
       to:"/infinity-scroll-observer",
       text:"Infinity Scroll Observer",
       comp:<InfinityScrollObserver></InfinityScrollObserver>
+    },
+    {
+      to:"/imine",
+      text:"Imine (immer + zustand)",
+      comp:<Imine></Imine>
     },
     {
       to:"/detect-images-loaded",

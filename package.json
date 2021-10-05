@@ -29,6 +29,7 @@
     "fabric-webpack": "^1.6.0-rc.1",
     "faker": "^5.5.3",
     "fontfaceobserver": "^2.1.0",
+    "immer": "^9.0.6",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
@@ -57,7 +58,8 @@
     "styled-components": "^5.2.1",
     "typescript": "^4.2.4",
     "uuid": "^8.3.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "zustand": "^3.5.12"
   },
   "scripts": {
     "start": "craco start",
