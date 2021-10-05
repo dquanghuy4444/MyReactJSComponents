@@ -36,6 +36,7 @@ import MindNode from './components/mind-node--reactflow/node.components';
 import WorkWithCanvasWithFabricjs from './components/work-with-canvas--fabricjs/work-with-canvas';
 
 import DetectImagesLoaded from './components/detect-images-loaded';
+import InfinityScrollObserver from './components/infinity-scroll-observe';
 import VirtualizedScrollWithReactWindow from './components/virtualized-scroll--reactwindow';
 
 
@@ -46,6 +47,11 @@ const pages:any[] = [
       to:"/",
       text:"Image Slider",
       comp:<ImageSlider slides={ SliderData }></ImageSlider>
+    },
+    {
+      to:"/infinity-scroll-observer",
+      text:"Infinity Scroll Observer",
+      comp:<InfinityScrollObserver></InfinityScrollObserver>
     },
     {
       to:"/detect-images-loaded",
