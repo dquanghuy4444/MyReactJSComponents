@@ -1,7 +1,7 @@
 
 
 import ImageSlider from './components/image-slider/ImageSlider';
-import Suggestions from './components/sug';
+import Suggestions from './components/suggestions';
 import DragAndDrop from './components/drag-nd-drop/DragAndDrop';
 import DragAndDropWithDnD from './components/drag-nd-drop--dnd/DragAndDropWithDnD';
 import Profiles from './components/skeleton-loading/Profiles';
