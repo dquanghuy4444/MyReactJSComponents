@@ -31,7 +31,6 @@
     "fontfaceobserver": "^2.1.0",
     "immer": "^9.0.6",
     "moment": "^2.29.1",
-    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "psd": "^3.2.0",
     "psd-new": "^3.2.0",
@@ -93,6 +92,7 @@
     "@types/uuid": "^8.3.0",
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
+    "sass": "^1.51.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
 }
