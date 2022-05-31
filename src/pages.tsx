@@ -40,6 +40,7 @@ import VirtualizedScrollWithReactWindow from "./components/virtualized-scroll--r
 import UploadFileToGGDrive from "./components/upload-file-to-gg-drive";
 
 import { SliderData } from "./data/slider-data";
+import Insert from "./components/insert-link-to-text-area";
 
 const pages: any[] = [
   {
@@ -231,6 +232,11 @@ const pages: any[] = [
     to: "/dropzone",
     text: "Drop Zone",
     comp: <DropZone></DropZone>,
+  },
+  {
+    to: "/insertlinktotextarea",
+    text: "Insert link to Text Area",
+    comp: <Insert></Insert>,
   },
   {
     to: "/mindnode",
