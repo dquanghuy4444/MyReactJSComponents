@@ -28,6 +28,7 @@ import CustomCursor from './components/custom-cursor/CustomCursor';
 import ScrollIndicatorBar from './components/scroll-indicator-bar/ScrollIndicatorBar';
 import CustomMentionEditor from './components/editor-mention--draftjs/EditorMention';
 import DarkMode from './components/dark-mode/DarkMode';
+import InsertLinkToArea from './components/insert-link-to-textarea';
 import LazyLoading from './components/lazy-loading/LazyLoading';
 import CloseWhenClickOutside from './components/close-when-click-outside/CloseWhenClickOutside';
 import EventBus from './components/event-bus/EventBus';
@@ -88,6 +89,11 @@ const pages:any[] = [
       to:"/searchfilter",
       text:"Search Filter",
       comp:<SearchFilter></SearchFilter>
+    },
+    {
+      to:"/insertlinktoarea",
+      text:"Insert Link To Area",
+      comp:<InsertLinkToArea></InsertLinkToArea>
     },
     {
       to:"/draganddrop",
