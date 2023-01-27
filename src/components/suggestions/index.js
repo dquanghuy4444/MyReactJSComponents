@@ -1,23 +1,23 @@
 
 import { useEffect, useState } from 'react';
-import { getSuggestions } from '../../api/Suggestions'
+import { getSuggestions } from '../../api/suggestions'
 
 import './index.css';
 
 function Suggestions() {
 
-    const [searchField , setSearchField] = useState('');
-    const [suggestions , setSuggestions] = useState([]);
+    const [searchField, setSearchField] = useState('');
+    const [suggestions, setSuggestions] = useState([]);
 
-    useEffect(() =>{
+    useEffect(() => {
         getSuggestions(searchField).then((suggestions) => {
             setSuggestions(suggestions);
         })
 
-    },[searchField])
+    }, [searchField])
     return (
         <div className="wrapper">
-            <input onChange={ (e) => setSearchField(e.target.value)  }></input>
+            <input onChange={(e) => setSearchField(e.target.value)}></input>
             <button className="btn">
                 Search
             </button>
@@ -25,9 +25,9 @@ function Suggestions() {
                 suggestions.length > 0 && (
                     <div className="suggestions">
                         {
-                            suggestions.map( suggestions => (<div>{ suggestions }</div>))
+                            suggestions.map(suggestions => (<div>{suggestions}</div>))
                         }
-                    </div>  
+                    </div>
                 )
             }
         </div>
