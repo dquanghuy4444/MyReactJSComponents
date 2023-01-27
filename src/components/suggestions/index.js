@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from 'react';
-import './Suggestions.css';
-import { getSuggestions } from '../../api/suggestions'
+import { getSuggestions } from '../../api/Suggestions'
+
+import './index.css';
+
 function Suggestions() {
 
     const [searchField , setSearchField] = useState('');
